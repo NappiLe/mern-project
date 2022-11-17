@@ -1,0 +1,51 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "anna",
+    "password": "anna"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "henry",
+    "password": "henry"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZhMjBiY2IzM2ZkODY5Y2Y0YWEyNWYiLCJpYXQiOjE2Njg1ODEwNjV9.MHNAYBW6SO2MPi3gwBTa_7w-w15zD1NhXCCvhGlJZO0
+
+{
+  "title": "My first post",
+  "description": "My very first post",
+  "url": "spotify.com",
+  "status": "LEARNING"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZiMjViNzNhYjQ3MGU2ZDM2MmU0NTUiLCJpYXQiOjE2Njc5ODM2MzJ9.wa-QUkVc6VvgTVa6zqUYu304SZFNvR2MEWC6GV1lcFc
+
+
+###
+PUT http://localhost:5000/api/posts/636b25d93ab470e6d362e458
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZiMjViNzNhYjQ3MGU2ZDM2MmU0NTUiLCJpYXQiOjE2Njc5ODM2MzJ9.wa-QUkVc6VvgTVa6zqUYu304SZFNvR2MEWC6GV1lcFc
+
+{
+  "title": "Vue",
+  "description": "Learn Vue",
+  "url": "https://vuejs.org",
+  "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/636b25d93ab470e6d362e458
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZiMjViNzNhYjQ3MGU2ZDM2MmU0NTUiLCJpYXQiOjE2Njc5ODM2MzJ9.wa-QUkVc6VvgTVa6zqUYu304SZFNvR2MEWC6GV1lcFc
